@@ -1,12 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graduation Project</title>
+    <title>جمعية ود الخيرية للتنمية الاجتماعية</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            overflow-x: hidden;
+        }
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background: url('fundraising-banner.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            padding: 20px;
+        }
+        .content, .news, .social, .partners {
+            padding: 50px;
+            font-size: 1.5rem;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s ease-in-out;
+        }
+        .content.visible, .news.visible, .social.visible, .partners.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: #f4f4f4;
+            padding: 20px 0;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+        .stat p {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Graduation Project</h1>
-    <p>This is my first HTML page.</p>
+    <div class="hero">
+        <h1>مساعدتك تغوث نكبة المكروب</h1>
+        <p>إرسال رسالة رقم 1 إلى 5117 للتبرع بـ 12 ريال شهريًا</p>
+    </div>
+    <div class="content" id="about">
+        <h2>عن الجمعية</h2>
+        <p>جمعية ود الخيرية للتنمية الاجتماعية تعنى بتمكين الأسر في الأحياء محدودة الدخل من خلال برامج تنموية وتكافلية.</p>
+    </div>
+    <div class="stats">
+        <div class="stat">
+            <h3>603</h3>
+            <p>عدد المستفيدين</p>
+        </div>
+        <div class="stat">
+            <h3>68</h3>
+            <p>عدد الموظفين</p>
+        </div>
+        <div class="stat">
+            <h3>488</h3>
+            <p>عدد الداعمين</p>
+        </div>
+        <div class="stat">
+            <h3>44</h3>
+            <p>عدد البرامج والأنشطة</p>
+        </div>
+    </div>
+    <div class="news" id="news">
+        <h2>أحدث الأخبار</h2>
+        <ul>
+            <li>توقيع اتفاقية شراكة مجتمعية مع جمعية أثاث - 13 أكتوبر 2024</li>
+            <li>مبادرة همة وعزم - 29 سبتمبر 2024</li>
+            <li>حفل تكريم أعضاء الجمعية - 2 يونيو 2024</li>
+            <li>شراكات مجتمعية - 27 مارس 2024</li>
+        </ul>
+    </div>
+    <div class="social" id="social">
+        <h2>تحديثات جمعية ود على تويتر</h2>
+        <p>متابعة آخر الأخبار عبر حسابنا @wud1431</p>
+    </div>
+    <div class="partners" id="partners">
+        <h2>الشركاء والداعمون</h2>
+        <p>تشمل شركاؤنا مجموعة الزامل، سابك، بنيان، ومدينة الملك عبد العزيز للعلوم والتقنية.</p>
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            let elements = document.querySelectorAll('.content, .news, .social, .partners');
+            elements.forEach(element => {
+                let position = element.getBoundingClientRect().top;
+                let screenPosition = window.innerHeight / 1.3;
+                if (position < screenPosition) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
