@@ -12,6 +12,110 @@
             text-align: right;
             overflow-x: hidden;
         }
+        .header {
+            background: #002147;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .social-icons a {
+            margin: 0 5px;
+        }
+        .social-icons img {
+            width: 20px;
+            height: 20px;
+        }
+        .nav-bar {
+            background: #002147;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            direction: rtl;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .nav-bar a:hover {
+            background: #004080;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 200px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            text-align: right;
+        }
+
+        .dropdown a {
+            color: black;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .dropdown a:hover {
+            background: #f2f2f2;
+        }
+
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+
+        /* Search Bar */
+        .search-container {
+            position: relative;
+        }
+
+        .search-box {
+            padding: 5px;
+            width: 150px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .search-results {
+            position: absolute;
+            background: white;
+            width: 150px;
+            max-height: 150px;
+            overflow-y: auto;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .search-results div {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .search-results div:hover {
+            background: #f2f2f2;
+         color: #002147;
+            font-weight: bold;
+        }
         .hero {
             width: 100%;
             height: 100vh;
@@ -44,71 +148,148 @@
         .stat {
             text-align: center;
         }
-        .stat h3 {
-            margin: 10px 0;
-            font-size: 1.5rem;
-        }
-        .stat p {
-            margin: 0;
-            font-size: 1.2rem;
-        }
+        .footer {
+    background: #002147;
+    color: white;
+    padding: 30px;
+    text-align: right;
+    width: 100%;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.footer-section button {
+    background: #ffcc00;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+}
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-container {
+    margin-top: auto;
+}
+
+
     </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>مساعدتك تغوث نكبة المكروب</h1>
-        <p>إرسال رسالة رقم 1 إلى 5117 للتبرع بـ 12 ريال شهريًا</p>
-    </div>
-    <div class="content" id="about">
-        <h2>عن الجمعية</h2>
-        <p>جمعية ود الخيرية للتنمية الاجتماعية تعنى بتمكين الأسر في الأحياء محدودة الدخل من خلال برامج تنموية وتكافلية.</p>
-    </div>
-    <div class="stats">
-        <div class="stat">
-            <h3>603</h3>
-            <p>عدد المستفيدين</p>
+    <div class="header">
+        <div>
+            رقم الهاتف: <a href="tel:0138645005">0138645005</a> | 
+            البريد الإلكتروني: <a href="mailto:wud@wudinfo.com">wud@wudinfo.com</a>
         </div>
-        <div class="stat">
-            <h3>68</h3>
-            <p>عدد الموظفين</p>
-        </div>
-        <div class="stat">
-            <h3>488</h3>
-            <p>عدد الداعمين</p>
-        </div>
-        <div class="stat">
-            <h3>44</h3>
-            <p>عدد البرامج والأنشطة</p>
+        <div class="social-icons">
+            <a href="https://x.com/wud1431" target="_blank"><img src="images/x.jpg" alt="" width="30">
+            </a>
+            <a href="https://www.instagram.com/wud1431/" target="_blank"><img src="images/insta.jpeg" alt="" width="30"></a>
+            <a href="https://www.youtube.com/user/wud1431/featured" target="_blank"><img src="images/you.jpeg" alt=""></a>
+            <a href="login.html">دخول الموظفين</a>
+
         </div>
     </div>
-    <div class="news" id="news">
-        <h2>أحدث الأخبار</h2>
-        <ul>
-            <li>توقيع اتفاقية شراكة مجتمعية مع جمعية أثاث - 13 أكتوبر 2024</li>
-            <li>مبادرة همة وعزم - 29 سبتمبر 2024</li>
-            <li>حفل تكريم أعضاء الجمعية - 2 يونيو 2024</li>
-            <li>شراكات مجتمعية - 27 مارس 2024</li>
-        </ul>
+   
+    <div class="nav-bar">
+        <div class="nav-item">
+            <a href="#">الرئيسية</a>
+        </div>
+        <div class="nav-item">
+            <a href="#">عن ود</a>
+            <div class="dropdown">
+                <a href="#">من نحن</a>
+                <a href="#">أهدافنا</a>
+                <a href="#">الهيكل التنظيمي</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="#">الحوكمة والشفافية</a>
+            <div class="dropdown">
+                <a href="#">التقارير المالية</a>
+                <a href="#">المبادئ والقيم</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="#">الخدمات الإلكترونية</a>
+            <div class="dropdown">
+                <a href="#">التبرعات</a>
+                <a href="#">تسجيل المتطوعين</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="#">البرامج والمشاريع</a>
+            <div class="dropdown">
+                <a href="#">المشاريع الحالية</a>
+                <a href="#">المشاريع المستقبلية</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="#">الإعلام</a>
+            <div class="dropdown">
+                <a href="#">الأخبار</a>
+                <a href="#">معرض الصور</a>
+                <a href="#">الفيديوهات</a>
+            </div>
+        </div>
+        <div class="nav-item">
+            <a href="#">تواصل معنا</a>
+            <div class="dropdown">
+                <a href="#">اتصل بنا</a>
+                <a href="#">الموقع</a>
+            </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="search" class="search-box" placeholder="بحث...">
+            <div class="search-results" id="search-results"></div>
+        </div>
     </div>
-    <div class="social" id="social">
-        <h2>تحديثات جمعية ود على تويتر</h2>
-        <p>متابعة آخر الأخبار عبر حسابنا @wud1431</p>
-    </div>
-    <div class="partners" id="partners">
-        <h2>الشركاء والداعمون</h2>
-        <p>تشمل شركاؤنا مجموعة الزامل، سابك، بنيان، ومدينة الملك عبد العزيز للعلوم والتقنية.</p>
-    </div>
+    <div id="footer-container"></div>
+
     <script>
-        window.addEventListener('scroll', function() {
-            let elements = document.querySelectorAll('.content, .news, .social, .partners');
-            elements.forEach(element => {
-                let position = element.getBoundingClientRect().top;
-                let screenPosition = window.innerHeight / 1.3;
-                if (position < screenPosition) {
-                    element.classList.add('visible');
-                }
-            });
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
         });
     </script>
+    
 </body>
 </html>
