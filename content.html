@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محتوى جمعية ود</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <img src="images/wud_new.png" alt="شعار الجمعية" class="logo">
+    </div>
+
+    <!-- Banner Image -->
+    <div class="banner">
+        <img src="images/picWud.png" alt="معاً لعالم أفضل">
+    </div>
+
+    <!-- Scrolling Message Section -->
+    <div id="scroll-message" class="hidden">
+        <p>
+            الحمدالله حمداً كثيراً مباركاً فيه على ما من الله علينا في تجديد موقع الجمعية الذي نتمنى ان يحقق مانصبوا اليه من:
+        </p>
+        <ul>
+            <li>نقل جميع أعمال الجمعية للاطلاع عليها من جميع المتابعين.</li>
+            <li>الشفافية بقدر المستطاع في جميع أعمال الجمعية.</li>
+            <li>سماع أكبر عدد من آراء الجمهور الذين نستسقي منه كثير المعلومات و الافكار التي تساهم في رفع العمل الاجتماعي.</li>
+        </ul>
+        <p>
+            فاهلًا و سهلا بكم في موقعنا، الذي نتمنى ان يحوز على رضاكم، كما نسعد باستقبال افكاركم ومقترحاتكم.
+        </p>
+        <p><strong>وقفنا الله و اياكم لما يحب و يرضي</strong></p>
+        <p><strong>رئيس مجلس إدارة جمعية ود الخيرية</strong></p>
+        <p><strong>نعيمة بنت عبدالرحمن الزامل</strong></p>
+        <a href="about.html" class="read-more">اقرأ المزيد</a>
+    </div>
+
+</body>
+<style> body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    text-align: right;
+    overflow-x: hidden;
+}
+
+/* Header and Logo */
+.header {
+    background: #002147;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+/* Banner Image */
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Scrolling Message */
+#scroll-message {
+    background: #f4f4f4;
+    padding: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 100s ease-in-out;
+}
+
+#scroll-message.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #002147;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background: #004080;
+}
+</style>
+</html>
